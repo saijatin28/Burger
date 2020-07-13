@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class BurgerIngredient extends Component {
 
     render() {
-        const ingredient = null;
+        let ingredient = null;
 
         switch ( this.props.type ) {
             case 'bread-bottom':
@@ -23,10 +23,7 @@ class BurgerIngredient extends Component {
                 ingredient = <div className={classes.Meat}></div>
                 break;
             case 'cheese':
-                redient = <div className={classes.Cheese}></div>
-                break;
-            case 'bread-bottom':
-                ingredient = <div className={classes.BreadBottom}></div>
+                ingredient = <div className={classes.Cheese}></div>
                 break;
             case 'salad':
                 ingredient = <div className={classes.Salad}></div>
@@ -43,7 +40,7 @@ class BurgerIngredient extends Component {
 
 }
 
-BurgerIngredient.PropTypes = {
+BurgerIngredient.propTypes = {
     type: PropTypes.string.isRequired
 }
 
